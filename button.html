@@ -7,6 +7,10 @@
         body {
             background-color: darkslateblue;
         }
+        label {
+            background-color: gray;
+            transition: 2s;
+        }
         #button {
             display: none;
         }
@@ -32,7 +36,7 @@
             border-radius: 20px;
             left: 1px;
             z-index: 1;
-            transition: 0.5s;
+            transition: 1s;
         }
         .sun {
             left: 5px;
@@ -42,14 +46,18 @@
             right: 5px;
             font-size: 30px;
         }
-        #button:checked + .circle {
+        #button:checked + label .circle {
             transform: translateX(58px) translateY(-20px);
+        }
+        input:checked + label {
+            background-color: yellow;
+            transition: 2s;
         }
     </style>
 </head>
 <body>
+    <input type="checkbox" id="button">
     <label for="button" class="button">
-        <input type="checkbox" id="button">
         <span class="circle"></span>
         <div class="sun">🌞</div>
         <div class="moon">🌛</div>
