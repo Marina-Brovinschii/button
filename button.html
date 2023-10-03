@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
             background-color: darkslateblue;
@@ -23,7 +24,7 @@
             position: relative;
             cursor: pointer;
         }
-        .circle, .sun, .moon {
+        .circle, .fa-sun, .fa-moon {
             position: absolute;
             top: 20px;
             transform: translateY(-20px);
@@ -38,13 +39,17 @@
             z-index: 1;
             transition: 1s;
         }
-        .sun {
+        .fa-sun {
             left: 5px;
             font-size: 30px;
+            top: 25px;
+            color: orange;
         }
-        .moon {
+        .fa-moon {
             right: 5px;
             font-size: 30px;
+            top: 25px;
+            color: yellow;
         }
         #button:checked + label .circle {
             transform: translateX(58px) translateY(-20px);
@@ -59,8 +64,8 @@
     <input type="checkbox" id="button">
     <label for="button" class="button">
         <span class="circle"></span>
-        <div class="sun">🌞</div>
-        <div class="moon">🌛</div>
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
     </label>
 </body>
 </html>
